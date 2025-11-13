@@ -1,0 +1,49 @@
+ESTA ES LA BASE DE DATOS:
+
+-- eliminar base de datos si existe
+drop database if exists portal_avisos;
+create database portal_avisos;
+use portal_avisos;
+
+-- tabla profesor
+create table profesor (
+  id_profesor int auto_increment primary key,
+  nombre_profesor varchar(100) not null,
+  apellido_profesor varchar(100) not null,
+  correo_profesor varchar(100) not null unique
+);
+
+-- tabla estudiante
+create table estudiante (
+  id_estudiante int auto_increment primary key,
+  nombre_estudiante varchar(100) not null,
+  apellido_estudiante varchar(100) not null,
+  correo_estudiante varchar(100) not null unique
+);
+
+-- tabla aviso
+create table avisos (
+  id_aviso int auto_increment primary key,
+  titulo varchar(150) not null,
+  contenido text not null,
+  fecha_publicacion timestamp default current_timestamp,
+  id_profesor int not null,
+  foreign key (id_profesor) references profesor(id_profesor)
+);
+
+-- insertar profesores
+insert into profesor (nombre_profesor, apellido_profesor, correo_profesor) values
+('juan', 'perez', 'juan.perez@uni.com'),
+('maria', 'gomez', 'maria.gomez@uni.com');
+
+-- insertar estudiantes
+insert into estudiante (nombre_estudiante, apellido_estudiante, correo_estudiante) values
+('ana', 'lopez', 'ana.lopez@uni.com'),
+('carlos', 'diaz', 'carlos.diaz@uni.com');
+
+-- insertar avisos
+insert into avisos (titulo, contenido, id_profesor) values
+('bienvenida al semestre', 'recuerden revisar el calendario académico.', 1),
+('tarea 1 disponible', 'la primera tarea está publicada en la plataforma.', 2);
+
+select * from avisos; -- ver el ingreso de datos

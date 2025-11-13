@@ -1,0 +1,7 @@
+C:\Users\USA\OneDrive\Escritorio\Base-de-Datos\portal_avisos\src\dao\AvisoDAO.java
+C:\Users\USA\OneDrive\Escritorio\Base-de-Datos\portal_avisos\src\database\Conexion.java
+C:\Users\USA\OneDrive\Escritorio\Base-de-Datos\portal_avisos\src\main\Main.java
+C:\Users\USA\OneDrive\Escritorio\Base-de-Datos\portal_avisos\src\main\TestConexion.java
+C:\Users\USA\OneDrive\Escritorio\Base-de-Datos\portal_avisos\src\models\Aviso.java
+C:\Users\USA\OneDrive\Escritorio\Base-de-Datos\portal_avisos\src\ui\LoginGUI.java
+C:\Users\USA\OneDrive\Escritorio\Base-de-Datos\portal_avisos\src\ui\PortalAvisosGUI.java
